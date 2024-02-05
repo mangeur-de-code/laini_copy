@@ -12,7 +12,7 @@ import { useAuth } from '@clerk/nextjs';
 const Navbar = () => {
   const pathname = usePathname();
   const isCurrentPage = (path) => pathname === path;
-  const {isSignedIn} = useAuth();
+  const { isSignedIn } = useAuth();
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: '0px 20px',
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 100) {
         setHasScrolled(true);
       } else {
         setHasScrolled(false);
@@ -34,14 +34,16 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
- 
+
   const scrollToElement = (elementId) => {
     const targetElement = document.getElementById(elementId);
-  
+
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
+        inline: 'nearest', // Keeps the element near the top of the viewport
+        blockOffset: 200,
       });
     }
   }
@@ -54,10 +56,10 @@ const Navbar = () => {
         <img src="/serene.png" alt="lainie logo" width={'30%'} />
       </Link>
       <div className='items-center justify-between gap-10 font-semibold hidden lg:flex'>
-        <span  onClick={()=> scrollToElement('home')} className={isCurrentPage('/') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Home</span>
-        <Link href={'/'} onClick={()=> scrollToElement('about')} className={isCurrentPage('/about') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>About</Link>
-        <Link href={'/'} onClick={()=> scrollToElement('faq')} className={isCurrentPage('/faq') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>FAQs</Link>
-        <Link href={'/'} onClick={()=> scrollToElement('contact')} className={isCurrentPage('/contact') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Contact</Link>
+        <span onClick={() => scrollToElement('home')} className={isCurrentPage('/') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Home</span>
+        <span onClick={() => scrollToElement('about')} className={isCurrentPage('/about') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>About</span>
+        <span onClick={() => scrollToElement('faq')} className={isCurrentPage('/faq') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>FAQs</span>
+        <span onClick={() => scrollToElement('contact')} className={isCurrentPage('/contact') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Contact</span>
         <Link href={isSignedIn ? "/chat" : "/sign-in"}>
           <Button variant='nav' size='xl'>{isSignedIn ? 'Chat Bot' : 'Log In'}</Button>
         </Link>
@@ -68,11 +70,11 @@ const Navbar = () => {
         </SheetTrigger>
         <SheetContent className="w-full z-10  " side='top'>
           <div className='flex flex-col items-center justify-between gap-10 font-semibold '>
-            <Link href={'/'} className={isCurrentPage('/') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Home</Link>
-            <Link href={'/about'} className={isCurrentPage('/about') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>About</Link>
-            <Link href={'/faq'} className={isCurrentPage('/faq') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>FAQs</Link>
-            <Link href={'/contact'} className={isCurrentPage('/contact') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Contact</Link>
-            <Link href={'/sign-in'}>
+            <span onClick={() => scrollToElement('home')} className={isCurrentPage('') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Home</span>
+            <span onClick={() => scrollToElement('about')} className={isCurrentPage('about') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>About</span>
+            <span onClick={() => scrollToElement('faq')} className={isCurrentPage('faq') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>FAQs</span>
+            <span onClick={() => scrollToElement('contact')} className={isCurrentPage('contact') ? 'text-[#f05aad]' : 'text-black hover:text-[#f05aad] transition-all'}>Contact</span>
+            <Link href={isSignedIn ? '/chat' : '/sign-in'}>
               <Button variant='nav' size='xl'>{isSignedIn ? 'Chat Bot' : 'Log In'}</Button>
             </Link>
           </div>

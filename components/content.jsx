@@ -4,7 +4,7 @@ const ContentLaine = () => {
     return (
         <div className='w-full py-20 space-y-10'>
             <div className='mx-auto'>
-                <h3 className='font-bold text-3xl mx-auto text-center'>Ready To transform your <br /> mental state for the better?</h3>
+                <h3 className='font-bold text-2xl lg:text-3xl mx-auto text-center'>Ready To transform your <br /> mental state for the better?</h3>
                 <p className='text-center mx-auto text-muted-foreground mt-3'>Start using Lainie and embark on your journey to mental bliss.</p>
 
             </div>
@@ -33,11 +33,11 @@ const ContentLaine = () => {
             </div>
 
             <div className='mx-auto'>
-                <h3 className='font-bold text-3xl mx-auto text-center'>Take Control of Your mental wellbeing Journey</h3>
+                <h3 className='font-bold text-2xl lg:text-3xl mx-auto text-center'>Take Control of Your mental wellbeing Journey</h3>
             </div>
 
-            <div className='flex flex-col lg:flex-row items-center justify-between w-full'>
-                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-80 rounded-md'>
+            <div className='flex flex-col lg:flex-row gap-5 lg:gap-0 items-center justify-between w-full'>
+                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 h-fit lg:h-80 rounded-md'>
                     <div className='w-52 h-52'>
                         <img src="/anon.svg" alt="bot image" className='object-cover' />
                     </div>
@@ -46,7 +46,7 @@ const ContentLaine = () => {
                         <p className='text-sm text-muted-foreground'>We prioritize your privacy. Lainie offers a secure and confidential platform, allowing you to express yourself freely without the fear of judgment. Your well-being is our top priority.</p>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-80 rounded-md'>
+                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-fit lg:h-80 rounded-md'>
                     <div className='w-52 h-52'>
                         <img src="/tailored.svg" alt="bot image" className='object-cover' />
                     </div>
@@ -55,7 +55,7 @@ const ContentLaine = () => {
                         <p className='text-sm text-muted-foreground'>Our AI is trained to understand and adapt to your unique communication style. This ensures that each conversation feels natural and personalized, creating a more effective and supportive experience.</p>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-80 rounded-md'>
+                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-fit lg:h-80 rounded-md'>
                     <div className='w-52 h-52'>
                         <img src="/freind.svg" alt="bot image" className='object-cover' />
                     </div>
@@ -64,7 +64,7 @@ const ContentLaine = () => {
                         <p className='text-sm text-muted-foreground'>Lainie provides gentle nudges and helpful resources based on your conversations. It's not just about talking; it's about empowering you with tools and insights to enhance your mental well-being.</p>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-80 rounded-md'>
+                <div className='flex flex-col items-center gap-3 p-4 w-full lg:w-1/4 bg-] h-fit lg:h-80 rounded-md'>
                     <div className='w-52 h-52'>
                         <img src="/learn.svg" alt="bot image" className='object-cover' />
                     </div>

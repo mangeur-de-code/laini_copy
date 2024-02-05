@@ -8,7 +8,7 @@ import {
 
 const FAQ = () => {
   return (
-    <div className='w-full py-20 px-3 flex flex-col gap-8'>
+    <div className='w-full py-20 px-3 flex flex-col gap-8' id='faq'>
       <div className='flex items-center justify-center text-center mx-auto'>
         <h3 className='text-2xl lg:text-3xl font-bold'>Frequently Asked <span className='text-[#f364b8]'>Questions</span> </h3>
       </div>

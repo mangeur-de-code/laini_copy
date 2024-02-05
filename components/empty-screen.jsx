@@ -36,7 +36,7 @@ export const EmptyScreen = ({ setInput }) => {
         
       </div>
       <div className='flex items-center justify-center'>
-          <img src="/conv.svg" alt="conversation.png" width={'80%'} />
+          <img src="/chatbro.svg" alt="conversation.png" className='w-full lg:w-2/3' />
         </div>
     </div>
   )

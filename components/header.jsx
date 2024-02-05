@@ -21,9 +21,9 @@ import { SettingsIcon } from 'lucide-react'
 export async function Header() {
   // const [dataToSend, setDataToSend] = React.useState(''); // Initialize with an empty string or the default data
   const isPro = await checkSubscription();
-  const {userId} = auth();
+  const { userId } = auth();
   // const promodal = useProModal();
-  
+
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between w-full h-16 px-4 border-b shrink-0 bg-gradient-to-b from-background/10 via-background/50 to-background/80 backdrop-blur-xl">
       <div className="flex items-center">
@@ -37,8 +37,11 @@ export async function Header() {
           <UserButton afterSignOutUrl='/' />
         </React.Suspense>
       </div>
+      <div>
+        <img src="/serenebot.png" alt="laine bot logo" className='w-10' />
+      </div>
       <div className="flex items-center justify-end space-x-2">
-        <span
+        {/* <span
           target="_blank"
           onClick={''}
           rel="noopener noreferrer"
@@ -46,19 +49,19 @@ export async function Header() {
         >
           <IconTelegram className={' text-[#f05aad]'} />
           <span className="hidden ml-2 md:flex cursor-pointer text-[#f05aad]"  >Chat in Telegram</span>
-        </span>
+        </span> */}
         <a href="/settings">
-        <button
-          target="_blank"
-          className={cn(buttonVariants({ variant: 'pro' }))}
-        >
+          <button
+            target="_blank"
+            className={cn(buttonVariants({ variant: 'pro' }))}
+          >
 
 
-          <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Get Alaine Pro'}</span>
-          <span >
-            <SettingsIcon size={16} />
-          </span>
-        </button>
+            <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Get Alaine Pro'}</span>
+            <span >
+              <SettingsIcon size={16} />
+            </span>
+          </button>
         </a>
       </div>
     </header>

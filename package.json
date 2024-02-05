@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run web\" \"npm run bot\"",
+    "dev": "npm run web",
     "web": "next dev",
     "bot": "node app/bot.js",
     "build": "next build",

@@ -82,6 +82,7 @@ export const PromptForm = ({
               <Button
                 type="submit"
                 size="icon"
+                variant="enter"
                 disabled={isLoading || input === ''}
               >
                 <IconArrowElbow />

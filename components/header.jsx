@@ -57,7 +57,7 @@ export async function Header() {
           >
 
 
-            <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Get Alaine Pro'}</span>
+            <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Get Laine Pro'}</span>
             <span >
               <SettingsIcon size={16} />
             </span>

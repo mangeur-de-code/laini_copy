@@ -40,7 +40,7 @@ export async function GET(){
                     price_data: {
                         currency: 'USD',
                         product_data: {
-                            name: 'Alaine Pro - Annualy',
+                            name: 'Laine Pro - Annualy',
                             description: 'Unlimited AI Generation'
                         },
                         unit_amount: 10550,

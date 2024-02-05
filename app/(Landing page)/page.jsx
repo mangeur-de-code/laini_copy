@@ -6,6 +6,7 @@ import FAQ from "@/components/faq";
 import Footer from "@/components/footer";
 import Home from "@/components/home";
 import Navbar from "@/components/navbar";
+import TakeControl from "@/components/take-control";
 import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -19,6 +20,7 @@ export default function LandingPage() {
         <Home />
         <AboutComponent />
         <ContentLaine/>
+        <TakeControl/>
         <FAQ />
         <Contact />
       </div>

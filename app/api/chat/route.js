@@ -4,7 +4,7 @@ import OpenAI from 'openai'
 
 // import { auth } from '@/auth'
 import { nanoid } from '@/lib/utils'
-import { auth, clerkClient } from '@clerk/nextjs'
+import { auth, currentUser,  } from '@clerk/nextjs'
 import { NextResponse } from 'next/server'
 import { checkApiLimit } from '@/lib/api-limits'
 import { checkSubscription } from '@/lib/subscriptions'
@@ -29,7 +29,7 @@ export async function POST(req) {
     const json = await req.json()
     const { messages, previewToken } = json
     const userId = auth()?.userId
-   
+   const kk = currentUser();
     if (!userId) {
         return new NextResponse('Unauthorized', {
             status: 401
@@ -48,6 +48,7 @@ export async function POST(req) {
         return new NextResponse('Free trial has expired', {status: 403});
     }
 
+    console.log(kk);
 
     const res = await openai.chat.completions.create({
         model: 'gpt-3.5-turbo',

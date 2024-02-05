@@ -32,13 +32,13 @@ const Footer = () => {
                 </div>
                 <div className='w-1/2 flex flex-col gap-10 items-end'>
                     <div className='flex items-center gap-4'>
-                        <Link href={'fb.com'}>
+                        <Link href={'/'}>
                             <img src="/fb.svg" alt="facebook logo" className='w-10 h-10 cur' />
                         </Link>
-                        <Link href={'fb.com'}>
+                        <Link href={'/'}>
                             <img src="/insta.svg" alt="instagram logo" className='w-10 h-10' />
                         </Link>
-                        <Link href={'fb.com'}>
+                        <Link href={'/'}>
                             <img src="/yt.svg" alt="youtube logo" className='w-10 h-10' />
                         </Link>
                     </div>

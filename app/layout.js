@@ -8,7 +8,7 @@ import ModalProvider from "@/components/modal-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Alaine | Mental health coach",
+  title: "Laine | Mental health coach",
   description: "Your 24/7 mental health coach",
 };
 

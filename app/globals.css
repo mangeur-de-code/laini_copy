@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.empty .cl-internal-g6a67s{
+  display: none;
+}
+.empty .cl-internal-jayce9{
+  font-size: 1.125rem;
+  font-weight: 600;
+}
  
 @layer base {
   :root {

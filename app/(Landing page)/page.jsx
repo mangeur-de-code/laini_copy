@@ -11,15 +11,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function LandingPage() {
-  // const tele =  window.Telegram.WebApp;
-
-  useEffect(()=>{
-    if (typeof window !== "undefined") {
-      const tele = window.Telegram.WebApp;
-      tele.ready();
-    }
-  })
-
+  
   return (
     <div>
       <div className="px-3 lg:px-0">

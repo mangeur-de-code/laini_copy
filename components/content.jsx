@@ -1,38 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const ContentLaine = () => {
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        rootMargin: '-10px',
-      });
-    
-      const containerVariants = {
-        hidden: {
-          scale: 0.3,
-          opacity: 0,
-        },
-        visible: {
-          scale: 1,
-          opacity: 1,
-          transition: {
-            type: 'spring',
-            stiffness: 100,
-            damping: 10,
-            duration: 0.5,
-          },
-        },
-      };
+   
+  
 
       
     return (
-        <motion.div className='w-full py-20 space-y-10'
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        ref={ref}
-        >
+        <div className='w-full py-20 space-y-10' >
             <div className='mx-auto'>
                 <h3 className='font-bold text-2xl lg:text-3xl mx-auto text-center'>Ready To transform your <br /> mental state for the better?</h3>
                 <p className='text-center mx-auto text-muted-foreground mt-3'>Start using Lainie and embark on your journey to mental bliss.</p>
@@ -107,7 +81,7 @@ const ContentLaine = () => {
 
 
 
-        </motion.div>
+        </div>
     )
 }
 

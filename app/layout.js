@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/navbar";
 import { Toaster } from "react-hot-toast";
 import ModalProvider from "@/components/modal-provider";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,8 @@ export default function RootLayout({ children }) {
         <ModalProvider/>
         <Toaster/>
         {children}
+        <Analytics />
+
         </body>
      
     </html>

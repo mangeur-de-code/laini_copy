@@ -56,7 +56,7 @@ export const SubscriptionButton = ({
     // </Button>
     <div className="flex flex-col items-center justify-center h-full py-10 px-3 lg:px-0 lg:h-screen">
     <div className={`w-full lg:w-1/2 text-center space-y-5`}>
-      <h2 className="text-3xl font-bold mt-20 lg:mt-0">{isPro ? 'Manage your subscription' : 'Get Laine Pro'}</h2>
+      <h2 className="text-3xl font-bold mt-20 lg:mt-0">{isPro ? 'Manage your subscription' : 'Get Lainie Pro'}</h2>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio laudantium ipsam aspernatur ipsum numquam itaque reprehenderit incidunt vitae, esse earum?</p>
 
       {isPro ? (
@@ -80,7 +80,7 @@ export const SubscriptionButton = ({
 
         <Card className='w-full lg:w-1/2'>
           <CardHeader>
-            <CardTitle className='text-xl font-bold'>Laine Pro - Monthly</CardTitle>
+            <CardTitle className='text-xl font-bold'>Lainie Pro - Monthly</CardTitle>
             <CardDescription>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, ea.</CardDescription>
           </CardHeader>
           <CardContent>
@@ -93,7 +93,7 @@ export const SubscriptionButton = ({
         </Card>
         <Card className='w-full lg:w-1/2'>
           <CardHeader>
-            <CardTitle className='text-xl font-bold flex item gap-2 justify-center'>Laine Pro - Yearly
+            <CardTitle className='text-xl font-bold flex item gap-2 justify-center'>Lainie Pro - Yearly
               <Badge className={'bg-[#e87749]'}>20% Off</Badge>
             </CardTitle>
             <CardDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, perspiciatis?</CardDescription>

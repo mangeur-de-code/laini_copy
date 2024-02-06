@@ -1,13 +1,13 @@
 
-import { UserButton, UserProfile, auth, clerkClient, getUser } from '@clerk/nextjs'
+import { useUser } from '@clerk/nextjs'
 
 export const EmptyScreen = () => {
-  // const {firstName} = auth();
+  const kk = useUser()
   return (
     <div className="mx-auto max-w-2xl px-4 empty">
       <div className="rounded-lg border bg-background p-8">
         <h1 className="mb-2 text-lg font-semibold flex items-center gap-2">
-         Hi <UserButton showName={true} /> 
+         Hi {kk.user?.firstName}
         </h1>
         <p className="mb-2 leading-normal text-muted-foreground">
         Welcome to Dr. Lainie!

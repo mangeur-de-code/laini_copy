@@ -23,7 +23,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         nav: "bg-[#ffe2f3] border border-[#f364b8] font-semibold text-[#f364b8] shadow-md hover:scale-105 transition",
         enter: "bg-[#f364b8] border border-[#f364b8] font-semibold text-white shadow-md hover:scale-105 transition",
-        pro: "kk"
+        pro: "kk",
+        home: "bg-[#f364b8] font-semibold text-white shadow-md hover:scale-105 transition"
       },
       size: {
         default: "h-9 px-4 py-2",

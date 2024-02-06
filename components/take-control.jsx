@@ -9,9 +9,10 @@ const TakeControl = () => {
     });
 
     const fadeInUpVariants = {
-        hidden: { opacity: 0, y: 30, scale: 0.5 },
+        hidden: { opacity: 0, y: 200, scale: 0.5 },
         visible: { opacity: 1, y: 0, scale: 1 },
-    };
+      };
+    
 
     return (
         <div className='w-full py-10' ref={ref}>
@@ -24,7 +25,7 @@ const TakeControl = () => {
                     variants={fadeInUpVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ stiffness: 100, damping: 10, duration: 0.2 }}
+                    transition={{  damping: 10, duration: 0.5 }}
                 >
                     <div className='w-52 h-52'>
                         <img src="/anon.svg" alt="bot image" className='object-cover' />
@@ -38,7 +39,7 @@ const TakeControl = () => {
                     variants={fadeInUpVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ stiffness: 100, damping: 10, duration: 0.2, delay: 0.2 }}
+                    transition={{  damping: 10, duration: 0.5, delay: 0.2 }}
                 >
                     <div className='w-52 h-52'>
                         <img src="/tailored.svg" alt="bot image" className='object-cover' />
@@ -52,7 +53,7 @@ const TakeControl = () => {
                     variants={fadeInUpVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ stiffness: 100, damping: 10, duration: 0.2, delay: 0.4 }}
+                    transition={{ damping: 10, duration: 0.5, delay: 0.4 }}
                 >
                     <div className='w-52 h-52'>
                         <img src="/freind.svg" alt="bot image" className='object-cover' />
@@ -66,7 +67,7 @@ const TakeControl = () => {
                     variants={fadeInUpVariants}
                     initial="hidden"
                     animate={inView ? "visible" : "hidden"}
-                    transition={{ stiffness: 100, damping: 10, duration: 0.2, delay: 0.6 }}
+                    transition={{  damping: 10, duration: 0.5, delay: 0.6 }}
                 >
                     <div className='w-52 h-52'>
                         <img src="/learn.svg" alt="bot image" className='object-cover' />

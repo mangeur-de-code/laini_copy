@@ -59,13 +59,13 @@ const ProModal = () => {
     <Dialog open={proModal.isOpen}onOpenChange={proModal.onClose} className=' max-w-2xl'>
   <DialogContent>
     <DialogHeader>
-      <DialogTitle className='flex items-center justify-center gap-2'>Upgrade to Laine <Badge className={'bg-[#e87749]'}>PRO</Badge></DialogTitle>
+      <DialogTitle className='flex items-center justify-center gap-2'>Upgrade to Lainie <Badge className={'bg-[#e87749]'}>PRO</Badge></DialogTitle>
       <DialogDescription className="text-center pt-2 space-y-2 text-zinc-900 font-medium">
       <div className="flex flex-col lg:flex-row items-center gap-4 justify-center w-full">
           
           <Card className='w-full lg:w-1/2'>
              <CardHeader>
-               <CardTitle className='text-xl font-bold'>Laine Pro - Monthly</CardTitle>
+               <CardTitle className='text-xl font-bold'>Lainie Pro - Monthly</CardTitle>
                <CardDescription>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, ea.</CardDescription>
              </CardHeader>
              <CardContent>
@@ -78,7 +78,7 @@ const ProModal = () => {
            </Card>
            <Card className='w-full lg:w-1/2'>
              <CardHeader>
-               <CardTitle className='text-xl font-bold flex item gap-2 justify-center'>Laine Pro - Yearly 
+               <CardTitle className='text-xl font-bold flex item gap-2 justify-center'>Lainie Pro - Yearly 
                <Badge className={'bg-[#e87749]'}>20% Off</Badge>
                </CardTitle>
                <CardDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit.</CardDescription>

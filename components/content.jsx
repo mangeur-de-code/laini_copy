@@ -11,10 +11,10 @@ const ContentLaine = () => {
     });
 
     const fadeInUpVariants = {
-        hidden: { opacity: 0, y: 30, scale: 0.5 },
+        hidden: { opacity: 0, y: 200, scale: 0.5 },
         visible: { opacity: 1, y: 0, scale: 1 },
-    };
-
+      };
+    
     return (
         <div className='w-full py-20 space-y-10' >
             <motion.div className='mx-auto'>
@@ -26,7 +26,7 @@ const ContentLaine = () => {
                 variants={fadeInUpVariants}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                transition={{type:"spring", stiffness: 100, damping: 10, duration: 0.2 }}
+                transition={{ damping: 10, duration: 0.6 }}
             >
                 <div id='about' className='w-full lg:w-1/2 flex flex-col justify-center h-fit'>
                     <img src="/bot.svg" className='w-2/3 mx-auto lg:ml-auto my-auto' alt="" />
@@ -42,7 +42,7 @@ const ContentLaine = () => {
               variants={fadeInUpVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.2, delay: 0.2 }}
+              transition={{  damping: 10, duration: 0.6 , delay: 0.3}}
             >
 
                 <div className='flex flex-col text-center lg:text-left items-start w-full lg:w-1/2 h-fit justify-center gap-3 lg:gap-10 px-3 lg:px-8'>

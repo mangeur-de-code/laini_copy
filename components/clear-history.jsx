@@ -56,9 +56,10 @@ export function ClearHistory({
                     toast.error(result.error)
                     return
                   }
-
+ 
                   setOpen(false)
-                  router.push('/')
+                  // router.push('/chat')
+                  location.reload()
                 })
               })
             }}

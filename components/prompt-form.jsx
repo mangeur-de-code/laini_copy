@@ -13,6 +13,7 @@ import {
 import { IconArrowElbow, IconPlus } from '@/components/ui/icons'
 import { useRouter } from 'next/navigation'
 import { ArrowRightSquare } from 'lucide-react'
+import Link from 'next/link'
 
 
 export const PromptForm = ({
@@ -46,12 +47,8 @@ export const PromptForm = ({
         <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <button
-              onClick={e => {
-                e.preventDefault()
-                router.refresh()
-                router.push('/chat')
-              }}
+            <Link
+              href={'/chat'}
               className={cn(
                 buttonVariants({ size: 'sm', variant: 'outline' }),
                 'absolute left-0 top-4 size-8 rounded-full bg-background p-0 sm:left-4'
@@ -59,7 +56,7 @@ export const PromptForm = ({
             >
               <IconPlus />
               <span className="sr-only">New Chat</span>
-            </button>
+            </Link>
           </TooltipTrigger>
           <TooltipContent>New Chat</TooltipContent>
         </Tooltip>

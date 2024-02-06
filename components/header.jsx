@@ -38,7 +38,7 @@ export async function Header() {
         </React.Suspense>
       </div>
       <div>
-        <img src="/serenebot.png" alt="laine bot logo" className='w-10' />
+        <img src="/serenebot.png" alt="lainie bot logo" className='w-10' />
       </div>
       <div className="flex items-center justify-end space-x-2">
         {/* <span
@@ -57,7 +57,7 @@ export async function Header() {
           >
 
 
-            <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Get Laine Pro'}</span>
+            <span className="hidden mr-1 sm:block">{isPro ? 'Manage Subscription' : 'Upgrade'}</span>
             <span >
               <SettingsIcon size={16} />
             </span>

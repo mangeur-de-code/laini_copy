@@ -10,9 +10,10 @@ const AboutComponent = () => {
   });
 
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.5 },
+    hidden: { opacity: 0, y: 200, scale: 0.5 },
     visible: { opacity: 1, y: 0, scale: 1 },
   };
+
 
 
 
@@ -26,9 +27,9 @@ const AboutComponent = () => {
         variants={fadeInUpVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.2 }}      
+        transition={{ damping: 10, duration: 0.8 }} 
       >
-        <h1 className='font-bold text-2xl lg:text-4xl mx-auto lg:mx-0'>About Dr. Laine Bot</h1>
+        <h1 className='font-bold text-2xl lg:text-4xl mx-auto lg:mx-0'>About Dr. Lainie Bot</h1>
         <p className="text-sm lg:text-xl text-muted-foreground">The journey to mental well-being is unique for each individual. That's why we've crafted an AI chatbot that goes beyond just conversation – it's a companion dedicated to supporting you on your quest for serenity.
           <br /> <br /> <strong>Her mission is simple:</strong> to provide a safe and empathetic space where you can openly express your thoughts and feelings. Lainie is more than just a chatbot; it's a virtual confidant, always ready to lend an understanding ear and offer guidance in times of need.
         </p>
@@ -39,7 +40,7 @@ const AboutComponent = () => {
         variants={fadeInUpVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.2 }}
+        transition={{ damping: 10, duration: 0.8 }}
       >
         <img src="/lif.svg" className='mx-auto w-2/3 lg:ml-0 lg:mr-auto my-auto' alt="" />
       </motion.div>

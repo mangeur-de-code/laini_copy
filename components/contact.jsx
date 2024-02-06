@@ -9,11 +9,9 @@ const Contact = () => {
   });
 
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.5 },
+    hidden: { opacity: 0, y: 200, scale: 0.5 },
     visible: { opacity: 1, y: 0, scale: 1 },
   };
-
-
 
   return (
     <div className='w-full h-fit bg-[#ffe2f3] rounded-md flex flex-col items-center justify-center mb-20 p-20 px-3  lg:p-10 lg:pb-0'  id='contact' ref={ref}>
@@ -22,7 +20,7 @@ const Contact = () => {
         variants={fadeInUpVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        transition={{stiffness: 100, damping: 10, duration: 0.2 }}      
+        transition={{damping: 10, duration: 0.6 }}      
       >
       <h2 className='text-2xl lg:text-3xl font-bold text-center px-3 lg:px-0'>Let's discuss your personal goals</h2>
       <div className='flex flex-col lg:flex-row items-center justify-between p-3 lg:p-10 w-full lg:w-full gap-2'>

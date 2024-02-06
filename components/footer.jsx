@@ -21,7 +21,7 @@ const Footer = () => {
             <div className='w-full h-fit flex flex-col gap-8 lg:gap-0 lg:flex-row items-center justify-center lg:justify-between mx-auto max-w-screen-xl'>
                 <div className='w-1/2 flex flex-col items-start gap-10'>
                     <span className='text-2xl font-bold w-28'>
-                        <img src="/serene.png" alt="laine logo"  />
+                        <img src="/serene.png" alt="lainie logo"  />
                     </span>
                     <div className='flex flex-col lg:flex-row gap-4 items-center font-medium text-white mx-auto lg:mx-0'>
                         <span onClick={()=> scrollToElement('home')}>Home</span>

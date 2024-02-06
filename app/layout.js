@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { Toaster } from "react-hot-toast";
 import ModalProvider from "@/components/modal-provider";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,19 +17,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <head>
-      <script src="https://telegram.org/js/telegram-web-app.js"></script>
-      </head>
-      <body className={inter.className}>
-        <ModalProvider/>
-        <Toaster/>
-        {children}
-        <Analytics />
-
+      <html lang="en">
+        <head>
+          <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        </head>
+        <body className={inter.className}>
+          <ModalProvider />
+          <Toaster />
+          {children}
+          <Analytics />
+          <SpeedInsights />
         </body>
-     
-    </html>
+
+      </html>
     </ClerkProvider>
   );
 }

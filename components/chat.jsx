@@ -90,7 +90,7 @@ export function Chat({ id, initialMessages, className }){
       />
 
       <Dialog open={previewTokenDialog} onOpenChange={setPreviewTokenDialog}>
-        <DialogContent>
+        {/* <DialogContent>
           <DialogHeader>
             <DialogTitle>Enter your OpenAI Key</DialogTitle>
             <DialogDescription>
@@ -122,7 +122,7 @@ export function Chat({ id, initialMessages, className }){
               Save Token
             </Button>
           </DialogFooter>
-        </DialogContent>
+        </DialogContent> */}
       </Dialog>
     </>
   );

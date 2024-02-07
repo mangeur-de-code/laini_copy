@@ -31,6 +31,10 @@ export const PromptForm = ({
     }
   }, [])
 
+  const newChat = () =>{
+    location.reload();
+  }
+  
   return (
     <form
       onSubmit={async e => {
@@ -47,8 +51,9 @@ export const PromptForm = ({
         <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link
-              href={'/chat'}
+            <span
+              // href={'/chat'}
+              onClick={newChat}
               className={cn(
                 buttonVariants({ size: 'sm', variant: 'outline' }),
                 'absolute left-0 top-4 size-8 rounded-full bg-background p-0 sm:left-4'
@@ -56,7 +61,7 @@ export const PromptForm = ({
             >
               <IconPlus />
               <span className="sr-only">New Chat</span>
-            </Link>
+            </span>
           </TooltipTrigger>
           <TooltipContent>New Chat</TooltipContent>
         </Tooltip>

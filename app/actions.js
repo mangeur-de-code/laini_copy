@@ -71,7 +71,7 @@ async function clearChats() {
 
   const chats = await kv.zrange(`user:chat:${session.userId}`, 0, -1);
   if (!chats.length) {
-    return redirect('/');
+    return redirect('/chat');
   }
   const pipeline = kv.pipeline();
 
@@ -82,8 +82,8 @@ async function clearChats() {
 
   await pipeline.exec();
 
-  revalidatePath('/');
-  return redirect('/');
+  revalidatePath('/chat');
+  return redirect('/chat');
 }
 
 async function getSharedChat(id) {

@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 
 import Link from 'next/link'
@@ -9,13 +10,22 @@ import { IconPlus } from '@/components/ui/icons'
 import { auth } from '@clerk/nextjs'
 
 
-export async function ChatHistory({userId}) {
+export function ChatHistory({userId}) {
+  const [mounted, setMounted] = React.useState(true)
   // const {userId} = auth();
+
+  React.useEffect(()=>{
+    setMounted(false)
+  },[])
+  const newChat = () =>{
+    location.reload();
+  }
   return (
     <div className="flex flex-col h-full">
       <div className="px-2 my-4">
-        <Link
-          href="/chat"
+        <span
+          // href="/chat"
+          onClick={newChat}
           className={cn(
             buttonVariants({ variant: 'outline' }),
             'h-10 w-full justify-start bg-zinc-50 px-4 shadow-none transition-colors hover:bg-zinc-200/40 dark:bg-zinc-900 dark:hover:bg-zinc-300/10'
@@ -23,7 +33,7 @@ export async function ChatHistory({userId}) {
         >
           <IconPlus className="-translate-x-2 stroke-2" />
           New Chat
-        </Link>
+        </span>
       </div>
       <React.Suspense
         fallback={
